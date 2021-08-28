@@ -1,0 +1,17 @@
+targets:
+  $default:
+    sources:
+      - lib/**
+      - graphql/**
+    builders:
+      json_serializable:
+        options:
+          include_if_null: false
+      artemis:
+        options:
+#          fragments_glob: graphql/fragments/*.graphql # this doesn't work either
+          schema_mapping:
+            - schema: graphql/schema.graphql
+              queries_glob: graphql/operations/**.graphql
+              output: lib/graphql/graphql_api.dart
+              fragments_glob: graphql/fragments/*.graphql

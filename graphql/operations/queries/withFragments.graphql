@@ -1,0 +1,5 @@
+query withFragments {
+    pokemon(name: "Blastoise") {
+        ...PokemonDetails
+    }
+}

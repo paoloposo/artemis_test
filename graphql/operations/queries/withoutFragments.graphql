@@ -1,0 +1,15 @@
+query withoutFragments {
+    pokemon(name: "Blastoise") {
+        id
+        name
+        height {
+            minimum
+            maximum
+        }
+        weight {
+            minimum
+            maximum
+        }
+        fleeRate
+    }
+}

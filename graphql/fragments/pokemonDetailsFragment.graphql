@@ -1,0 +1,13 @@
+fragment PokemonDetails on Pokemon {
+    id
+    name
+    height {
+        minimum
+        maximum
+    }
+    weight {
+        minimum
+        maximum
+    }
+    fleeRate
+}
